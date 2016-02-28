@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_0KpGsKZCEeSSq-tnJGIsBQ" name="Model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_0KpGsaZCEeSSq-tnJGIsBQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_6TUVIKZCEeSSq-tnJGIsBQ" name="Clients">
+    <packagedElement xmi:type="uml:Class" xmi:id="_EAQUgKZDEeSSq-tnJGIsBQ" name="Client1">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7jZngKZDEeSSq-tnJGIsBQ" name="Attribute2">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8TfnsKZDEeSSq-tnJGIsBQ" name="Attribute4">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_83hh0KZDEeSSq-tnJGIsBQ" name="Attribute5" type="_XPiM0KZDEeSSq-tnJGIsBQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_F3SHkKZDEeSSq-tnJGIsBQ" name="Client2">
+      <generalization xmi:type="uml:Generalization" xmi:id="_PMIFIKZFEeSSq-tnJGIsBQ" general="_EAQUgKZDEeSSq-tnJGIsBQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HGOKcKZEEeSSq-tnJGIsBQ" name="Attribute3"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Gfwc0KZDEeSSq-tnJGIsBQ" name="ClientRoot">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_U4NeMKZFEeSSq-tnJGIsBQ" name="client1" type="_EAQUgKZDEeSSq-tnJGIsBQ" aggregation="composite" association="_U4PTYKZFEeSSq-tnJGIsBQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U4NeMaZFEeSSq-tnJGIsBQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U4NeMqZFEeSSq-tnJGIsBQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_e1tpIKZFEeSSq-tnJGIsBQ" name="client2" type="_F3SHkKZDEeSSq-tnJGIsBQ" aggregation="composite" association="_e1veUKZFEeSSq-tnJGIsBQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e1tpIaZFEeSSq-tnJGIsBQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e1tpIqZFEeSSq-tnJGIsBQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_EQ-mMKZFEeSSq-tnJGIsBQ" name="Dependency" client="_6TUVIKZCEeSSq-tnJGIsBQ" supplier="_AIsNEKZDEeSSq-tnJGIsBQ"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_U4PTYKZFEeSSq-tnJGIsBQ" name="cr-c1" memberEnd="_U4PTYaZFEeSSq-tnJGIsBQ _U4NeMKZFEeSSq-tnJGIsBQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_U4PTYaZFEeSSq-tnJGIsBQ" name="clientRoot" type="_Gfwc0KZDEeSSq-tnJGIsBQ" association="_U4PTYKZFEeSSq-tnJGIsBQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U4PTYqZFEeSSq-tnJGIsBQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U4PTY6ZFEeSSq-tnJGIsBQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_e1veUKZFEeSSq-tnJGIsBQ" name="cr-c2" memberEnd="_e1wFYKZFEeSSq-tnJGIsBQ _e1tpIKZFEeSSq-tnJGIsBQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_e1wFYKZFEeSSq-tnJGIsBQ" name="clientRoot" type="_Gfwc0KZDEeSSq-tnJGIsBQ" association="_e1veUKZFEeSSq-tnJGIsBQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e1wFYaZFEeSSq-tnJGIsBQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e1wFYqZFEeSSq-tnJGIsBQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_AIsNEKZDEeSSq-tnJGIsBQ" name="Server">
+    <packagedElement xmi:type="uml:Class" xmi:id="_WJ4MUKZDEeSSq-tnJGIsBQ" name="Server1">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Jqxx4KZEEeSSq-tnJGIsBQ" name="Attribute1"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_L8v0gKZEEeSSq-tnJGIsBQ" name="service">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WyLtAKZEEeSSq-tnJGIsBQ" name="service1return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_XPiM0KZDEeSSq-tnJGIsBQ" name="DataClass1">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_fTsQgKZDEeSSq-tnJGIsBQ" name="Field1">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_n5rO4KZDEeSSq-tnJGIsBQ" name="Field2">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pHuWYKZDEeSSq-tnJGIsBQ" name="Field3">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qCBbcKZDEeSSq-tnJGIsBQ" name="Field4">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_i_T7wKZFEeSSq-tnJGIsBQ" name="Objects">
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_oJRfMKZFEeSSq-tnJGIsBQ" name="clientObj1" classifier="_F3SHkKZDEeSSq-tnJGIsBQ"/>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_u01_UKZFEeSSq-tnJGIsBQ" name="clientObj2" classifier="_F3SHkKZDEeSSq-tnJGIsBQ"/>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_u9PtYKZFEeSSq-tnJGIsBQ" name="serverObj1" classifier="_WJ4MUKZDEeSSq-tnJGIsBQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_BQKrIKZGEeSSq-tnJGIsBQ" client="_oJRfMKZFEeSSq-tnJGIsBQ" supplier="_u9PtYKZFEeSSq-tnJGIsBQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_CUrcIKZGEeSSq-tnJGIsBQ" client="_u01_UKZFEeSSq-tnJGIsBQ" supplier="_u9PtYKZFEeSSq-tnJGIsBQ"/>
+  </packagedElement>
+</uml:Model>

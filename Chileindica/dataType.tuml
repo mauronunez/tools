@@ -1,0 +1,9 @@
+package dataType;
+
+primitive Integer; 
+
+primitive String; 
+
+primitive Real; 
+
+end.

@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cl.chileindica</groupId>
+	<artifactId>cl.chileindica.weka</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+
+		<dependency>
+			<groupId>nz.ac.waikato.cms.weka</groupId>
+			<artifactId>weka-dev</artifactId>
+			<version>3.7.13</version>
+		</dependency>
+<dependency>
+	<groupId>cl.inversion.amtem</groupId>
+	<artifactId>NeuralNetwork</artifactId>
+	<version>1.0.0</version>
+</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.35</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.rholder</groupId>
+			<artifactId>snowball-stemmer</artifactId>
+			<version>1.3.0.581.1</version>
+		</dependency>
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>latentSemanticAnalysis</artifactId>
+	<version>1.0.3</version>
+</dependency>
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>decorate</artifactId>
+	<version>1.0.3</version>
+</dependency>
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>generalizedSequentialPatterns</artifactId>
+	<version>1.0.2</version>
+</dependency>
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>hiddenNaiveBayes</artifactId>
+	<version>1.0.2</version>
+</dependency>
+
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>lazyBayesianRules</artifactId>
+	<version>1.0.2</version>
+</dependency>
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>ridor</artifactId>
+	<version>1.0.2</version>
+</dependency>
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>functionalTrees</artifactId>
+	<version>1.0.3</version>
+</dependency>
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>ensembleLibrary</artifactId>
+	<version>1.0.4</version>
+</dependency>
+
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>J48graft</artifactId>
+	<version>1.0.3</version>
+</dependency>
+
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>alternatingDecisionTrees</artifactId>
+	<version>1.0.5</version>
+</dependency>
+
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>cascadeKMeans</artifactId>
+	<version>1.0.3</version>
+</dependency>
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>LibSVM</artifactId>
+	<version>1.0.6</version>
+</dependency>
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>classificationViaClustering</artifactId>
+	<version>1.0.3</version>
+</dependency>
+
+<dependency>
+	<groupId>nz.ac.waikato.cms.weka</groupId>
+	<artifactId>winnow</artifactId>
+	<version>1.0.2</version>
+</dependency>
+
+	</dependencies>
+</project>

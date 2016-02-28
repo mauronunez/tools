@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="urn:ConsultaBip" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:ConsultaBip" xmlns:intf="urn:ConsultaBip" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://data.ws.consultaBip.bip.indecs" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="http://data.ws.consultaBip.bip.indecs" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="urn:ConsultaBip"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ValoresDataWS">
+    <sequence>
+     <element name="codigo" nillable="true" type="soapenc:long"/>
+     <element name="nombre" nillable="true" type="soapenc:string"/>
+     <element name="valor" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="DatosProgramacionDataWS">
+    <sequence>
+     <element name="anoMoneda" type="xsd:int"/>
+     <element name="codigoEtapa" nillable="true" type="soapenc:short"/>
+     <element name="nombreEtapa" nillable="true" type="soapenc:string"/>
+     <element name="descripcion" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ItemDataWS">
+    <sequence>
+     <element name="codigoItem" nillable="true" type="soapenc:long"/>
+     <element name="duracion" nillable="true" type="soapenc:short"/>
+     <element name="monto" nillable="true" type="soapenc:double"/>
+     <element name="nombreItem" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ProgramacionDataWS">
+    <sequence>
+     <element name="datosProgramacion" nillable="true" type="tns1:DatosProgramacionDataWS"/>
+     <element name="item" nillable="true" type="impl:ArrayOf_tns2_ItemDataWS"/>
+    </sequence>
+   </complexType>
+   <complexType name="DatosSolicitudDataWS">
+    <sequence>
+     <element name="anoSolicitud" type="xsd:short"/>
+     <element name="codigoEtapaDesde" nillable="true" type="soapenc:short"/>
+     <element name="codigoEtapaPostula" nillable="true" type="soapenc:short"/>
+     <element name="codigoInstitucionRate" nillable="true" type="soapenc:long"/>
+     <element name="descripcionEtapa" nillable="true" type="soapenc:string"/>
+     <element name="estadoSituacion" nillable="true" type="soapenc:string"/>
+     <element name="fechaCreacionSolicitud" nillable="true" type="soapenc:string"/>
+     <element name="fechaIngresoSNI" nillable="true" type="soapenc:string"/>
+     <element name="fechaModificacionSolicitud" nillable="true" type="soapenc:string"/>
+     <element name="fechaPostulacionSNI" nillable="true" type="soapenc:string"/>
+     <element name="fechaRate" nillable="true" type="soapenc:string"/>
+     <element name="nombreEtapaDesde" nillable="true" type="soapenc:string"/>
+     <element name="nombreEtapaPostula" nillable="true" type="soapenc:string"/>
+     <element name="nombreInstitucionRate" nillable="true" type="soapenc:string"/>
+     <element name="rate" nillable="true" type="soapenc:string"/>
+     <element name="tipoSolicitud" nillable="true" type="soapenc:string"/>
+     <element name="usuarioIngresoSNI" nillable="true" type="soapenc:string"/>
+     <element name="usuarioPostulacionSNI" nillable="true" type="soapenc:string"/>
+     <element name="usuarioRate" nillable="true" type="soapenc:string"/>
+     <element name="observacionesRate" nillable="true" type="soapenc:string"/>
+     <element name="fechaInicioEstimada" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="MontoSolicitadoDataWS">
+    <sequence>
+     <element name="codigoFuenteFinanciera" nillable="true" type="soapenc:long"/>
+     <element name="codigoInstitucionFinanciera" nillable="true" type="soapenc:long"/>
+     <element name="costoTotal" nillable="true" type="soapenc:long"/>
+     <element name="gastoAcumulado" nillable="true" type="soapenc:long"/>
+     <element name="montoSaldoPorInvertirPesos" nillable="true" type="soapenc:long"/>
+     <element name="montoSolicitadoAnoPesos" nillable="true" type="soapenc:long"/>
+     <element name="nombreFuenteFinanciera" nillable="true" type="soapenc:string"/>
+     <element name="nombreInstitucionFinanciera" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="SolicitudDataWS">
+    <sequence>
+     <element name="datosSolicitudes" nillable="true" type="tns1:DatosSolicitudDataWS"/>
+     <element name="montosSolicitados" nillable="true" type="impl:ArrayOf_tns2_MontoSolicitadoDataWS"/>
+    </sequence>
+   </complexType>
+   <complexType name="IdiDataWS">
+    <sequence>
+     <element name="areaInfluencia" nillable="true" type="soapenc:string"/>
+     <element name="benefAmbosSexos" type="xsd:int"/>
+     <element name="beneficiariosHombres" type="xsd:int"/>
+     <element name="beneficiariosMujeres" type="xsd:int"/>
+     <element name="codigoBip" nillable="true" type="soapenc:long"/>
+     <element name="codigoComuna" nillable="true" type="soapenc:long"/>
+     <element name="codigoInstitucionEtapa" nillable="true" type="soapenc:long"/>
+     <element name="codigoPais" nillable="true" type="soapenc:long"/>
+     <element name="codigoParte" type="xsd:short"/>
+     <element name="codigoProceso" nillable="true" type="soapenc:long"/>
+     <element name="codigoProvincia" nillable="true" type="soapenc:long"/>
+     <element name="codigoRegion" nillable="true" type="soapenc:long"/>
+     <element name="codigoSector" nillable="true" type="soapenc:long"/>
+     <element name="codigoSeia" nillable="true" type="soapenc:string"/>
+     <element name="codigoSubSector" nillable="true" type="soapenc:long"/>
+     <element name="codigoTipologia" nillable="true" type="soapenc:long"/>
+     <element name="mensajeTransaccion" nillable="true" type="soapenc:string"/>
+     <element name="nombreComuna" nillable="true" type="soapenc:string"/>
+     <element name="nombreIdi" nillable="true" type="soapenc:string"/>
+     <element name="nombreInstitucionEtapa" nillable="true" type="soapenc:string"/>
+     <element name="nombrePais" nillable="true" type="soapenc:string"/>
+     <element name="nombreProceso" nillable="true" type="soapenc:string"/>
+     <element name="nombreProvincia" nillable="true" type="soapenc:string"/>
+     <element name="nombreRegion" nillable="true" type="soapenc:string"/>
+     <element name="nombreSector" nillable="true" type="soapenc:string"/>
+     <element name="nombreSeia" nillable="true" type="soapenc:string"/>
+     <element name="nombreSubSector" nillable="true" type="soapenc:string"/>
+     <element name="nombreTipologia" nillable="true" type="soapenc:string"/>
+     <element name="vidaUtil" type="xsd:short"/>
+     <element name="indicadores" nillable="true" type="impl:ArrayOf_tns2_ValoresDataWS"/>
+     <element name="magnitudes" nillable="true" type="impl:ArrayOf_tns2_ValoresDataWS"/>
+     <element name="programaciones" nillable="true" type="impl:ArrayOf_tns2_ProgramacionDataWS"/>
+     <element name="solicitudes" nillable="true" type="impl:ArrayOf_tns2_SolicitudDataWS"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema targetNamespace="urn:ConsultaBip" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://data.ws.consultaBip.bip.indecs"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOf_tns2_ValoresDataWS">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:ValoresDataWS[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns2_ItemDataWS">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:ItemDataWS[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns2_ProgramacionDataWS">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:ProgramacionDataWS[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns2_MontoSolicitadoDataWS">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:MontoSolicitadoDataWS[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns2_SolicitudDataWS">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:SolicitudDataWS[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+     <message name="getCodigoBipRequest">
+
+          <part name="in0" type="soapenc:long"/>
+
+          <part name="in1" type="xsd:short"/>
+
+     </message>
+
+     <message name="getCodigoBipResponse">
+
+          <part name="getCodigoBipReturn" type="tns1:IdiDataWS"/>
+
+     </message>
+
+     <message name="pruebaConsultaBipRequest">
+
+          <part name="in0" type="soapenc:string"/>
+
+     </message>
+
+     <message name="pruebaConsultaBipResponse">
+
+          <part name="pruebaConsultaBipReturn" type="soapenc:string"/>
+
+     </message>
+
+     <portType name="ConsultaProyectoBipInterfaz">
+
+          <operation name="getCodigoBip" parameterOrder="in0 in1">
+
+               <input message="impl:getCodigoBipRequest" name="getCodigoBipRequest"/>
+
+               <output message="impl:getCodigoBipResponse" name="getCodigoBipResponse"/>
+
+          </operation>
+
+          <operation name="pruebaConsultaBip" parameterOrder="in0">
+
+               <input message="impl:pruebaConsultaBipRequest" name="pruebaConsultaBipRequest"/>
+
+               <output message="impl:pruebaConsultaBipResponse" name="pruebaConsultaBipResponse"/>
+
+          </operation>
+
+     </portType>
+
+     <binding name="ConsultaBipSoapBinding" type="impl:ConsultaProyectoBipInterfaz">
+
+          <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+          <operation name="getCodigoBip">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <input name="getCodigoBipRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ConsultaBip" use="encoded"/>
+
+               </input>
+
+               <output name="getCodigoBipResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ConsultaBip" use="encoded"/>
+
+               </output>
+
+          </operation>
+
+          <operation name="pruebaConsultaBip">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <input name="pruebaConsultaBipRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ConsultaBip" use="encoded"/>
+
+               </input>
+
+               <output name="pruebaConsultaBipResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ConsultaBip" use="encoded"/>
+
+               </output>
+
+          </operation>
+
+     </binding>
+
+     <service name="ConsultaProyectoBipInterfazService">
+
+          <port binding="impl:ConsultaBipSoapBinding" name="ConsultaBip">
+
+               <wsdlsoap:address location="http://bip.ministeriodesarrollosocial.gob.cl/axis/services/ConsultaBip"/>
+
+          </port>
+
+     </service>
+
+</definitions>

@@ -1,0 +1,14 @@
+package chileindica;
+
+import dataType;
+
+class Proyecto
+attribute name:String;
+attribute institucion:Institucion;
+end;
+
+class Institucion
+attribute name:String;
+end;
+
+end.
